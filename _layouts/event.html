@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<article class="event-detail" itemscope itemtype="https://schema.org/Event">
+
+  <!-- Event Hero -->
+  <section class="event-hero" {% if page.hero_image %}style="--hero-img: url('{{ page.hero_image | relative_url }}')"{% endif %}>
+    <div class="event-hero__overlay"></div>
+    <div class="container event-hero__content">
+      <div class="event-hero__meta">
+        <span class="category-tag category-tag--{{ page.category | downcase | replace: ' ', '-' | replace: '-pop', '-pop' }}">
+          {{ page.category }}
+        </span>
+        <span class="event-hero__year">{{ page.year }}</span>
+      </div>
+      <h1 class="event-hero__title" itemprop="name">{{ page.title }}</h1>
+      <p class="event-hero__subtitle" itemprop="description">{{ page.subtitle }}</p>
+      <div class="event-hero__stats">
+        {% for stat in page.stats %}
+        <div class="event-hero__stat">
+          <span class="stat-number">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Body -->
+  <div class="event-body container container--narrow">
+
+    {% if page.role %}
+    <div class="event-meta-row">
+      <div class="event-meta-item">
+        <span class="event-meta-label">Role</span>
+        <span class="event-meta-value">{{ page.role }}</span>
+      </div>
+      <div class="event-meta-item">
+        <span class="event-meta-label">Company</span>
+        <span class="event-meta-value">{{ page.company }}</span>
+      </div>
+      <div class="event-meta-item">
+        <span class="event-meta-label">Period</span>
+        <span class="event-meta-value">{{ page.period }}</span>
+      </div>
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+  </div>
+
+  <!-- Next Event CTA -->
+  <section class="event-cta">
+    <div class="container text-center">
+      <p class="event-cta__label">Explore more work</p>
+      <a href="{{ '/events' | relative_url }}" class="btn btn--outline">← Back to All Events</a>
+    </div>
+  </section>
+
+</article>

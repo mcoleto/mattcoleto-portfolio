@@ -1,0 +1,27 @@
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="{{ '/' | relative_url }}" class="nav__logo" aria-label="Matt Coleto - Home">
+      <span class="nav__logo-mark">MC</span>
+      <span class="nav__logo-name">Matt Coleto</span>
+    </a>
+
+    <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__links" id="nav-links" role="list">
+      <li><a href="{{ '/' | relative_url }}" class="nav__link {% if page.url == '/' %}nav__link--active{% endif %}">Home</a></li>
+      <li><a href="{{ '/about' | relative_url }}" class="nav__link {% if page.url contains '/about' %}nav__link--active{% endif %}">About</a></li>
+      <li><a href="{{ '/events' | relative_url }}" class="nav__link {% if page.url contains '/events' %}nav__link--active{% endif %}">Work</a></li>
+      <li><a href="{{ '/contact' | relative_url }}" class="nav__link {% if page.url contains '/contact' %}nav__link--active{% endif %}">Contact</a></li>
+      <li>
+        <a href="{{ '/assets/files/Matt_Coleto_Resume_2026.pdf' | relative_url }}"
+           class="nav__cta btn btn--gradient"
+           download
+           aria-label="Download Resume PDF">
+          Resume ↓
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

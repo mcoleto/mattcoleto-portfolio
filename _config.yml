@@ -1,0 +1,50 @@
+title: Matt Coleto
+description: Events Marketing Leader crafting cultural impact at the intersection of Anime, K-pop, and Esports.
+url: "https://mattcoleto.com"
+baseurl: ""
+
+author:
+  name: Matt Coleto
+  email: matt.coleto@gmail.com
+  linkedin: https://linkedin.com/in/mattcoleto
+  twitter: https://twitter.com/mattcoleto
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /events/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins (GitHub Pages safe)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .gitignore
+
+# SEO / Social
+twitter:
+  username: mattcoleto
+  card: summary_large_image
+
+logo: /assets/images/og-image.jpg

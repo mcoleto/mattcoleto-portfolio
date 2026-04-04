@@ -1,0 +1,130 @@
+---
+layout: default
+title: Work
+description: Events, campaigns, and brand activations by Matt Coleto — spanning Anime, K-pop, Esports, and beyond.
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Portfolio</p>
+    <h1 class="page-hero__title">Events & Campaigns</h1>
+    <p class="page-hero__subtitle">Case studies from a decade at the intersection of fan culture and live experiences.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar" role="group" aria-label="Filter events by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="anime">Anime</button>
+      <button class="filter-btn" data-filter="k-pop">K-pop</button>
+      <button class="filter-btn" data-filter="esports">Esports</button>
+      <button class="filter-btn" data-filter="brand">Brand</button>
+    </div>
+
+    <!-- Events Grid -->
+    <div class="events-grid" id="events-grid">
+
+      {% assign sorted_events = site.events | sort: "year" | reverse %}
+      {% for event in sorted_events %}
+      <a href="{{ event.url | relative_url }}"
+         class="event-card reveal"
+         data-category="{{ event.category | downcase | replace: ' ', '-' }}"
+         style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <div class="event-card__image {% unless event.image %}placeholder{% endunless %}">
+          {% if event.image %}
+            <img src="{{ event.image | relative_url }}" alt="{{ event.title }}" loading="lazy">
+          {% else %}
+            <span>{{ event.emoji | default: '🎌' }}</span>
+          {% endif %}
+        </div>
+        <div class="event-card__body">
+          <div class="event-card__top">
+            <span class="category-tag category-tag--{{ event.category | downcase | replace: ' ', '-' }}">{{ event.category }}</span>
+            <span class="event-card__year">{{ event.year }}</span>
+          </div>
+          <h2 class="event-card__title">{{ event.title }}</h2>
+          <p class="event-card__desc">{{ event.description | truncate: 120 }}</p>
+          <p class="event-card__metric">{{ event.metric }}</p>
+          <p class="event-card__cta">View Case Study →</p>
+        </div>
+      </a>
+      {% endfor %}
+
+      <!-- Static fallback cards (shown when collection is being set up) -->
+      {% if site.events.size == 0 %}
+
+      <a href="{{ '/events/anime-awards-2023' | relative_url }}" class="event-card reveal" data-category="anime" style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <div class="event-card__image placeholder"><span>🏆</span></div>
+        <div class="event-card__body">
+          <div class="event-card__top">
+            <span class="category-tag category-tag--anime">Anime</span>
+            <span class="event-card__year">2023</span>
+          </div>
+          <h2 class="event-card__title">The Anime Awards — Tokyo Broadcast</h2>
+          <p class="event-card__desc">Scaled the world's largest anime fan vote from 18M to 51M ballots across 200+ countries, earning two Telly Awards for the live Tokyo broadcast.</p>
+          <p class="event-card__metric">✦ 51M global votes · 2× Telly Award winner · 200+ countries</p>
+          <p class="event-card__cta">View Case Study →</p>
+        </div>
+      </a>
+
+      <a href="{{ '/events/clash-royale-league-2020' | relative_url }}" class="event-card reveal" data-category="esports" style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <div class="event-card__image placeholder"><span>⚔️</span></div>
+        <div class="event-card__body">
+          <div class="event-card__top">
+            <span class="category-tag category-tag--esports">Esports</span>
+            <span class="event-card__year">2020</span>
+          </div>
+          <h2 class="event-card__title">Clash Royale League — 2020 Virtual Season</h2>
+          <p class="event-card__desc">Architected the full marketing strategy for Supercell's first fully virtual esports season featuring Team Liquid, SK Gaming, and Team Queso.</p>
+          <p class="event-card__metric">✦ 1M+ subscribers · 25M+ broadcast views</p>
+          <p class="event-card__cta">View Case Study →</p>
+        </div>
+      </a>
+
+      <a href="{{ '/events/kcon-north-america' | relative_url }}" class="event-card reveal" data-category="k-pop" style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <div class="event-card__image placeholder"><span>🎤</span></div>
+        <div class="event-card__body">
+          <div class="event-card__top">
+            <span class="category-tag category-tag--k-pop">K-pop</span>
+            <span class="event-card__year">2016–2021</span>
+          </div>
+          <h2 class="event-card__title">KCON — International Festival Series</h2>
+          <p class="event-card__desc">Led digital strategy for 7 international KCON festivals, driving 1B+ media impressions across MTV, ET, Variety, and MNET Korea over five years.</p>
+          <p class="event-card__metric">✦ 1B+ media impressions · 7 global festivals · 30+ agency partners</p>
+          <p class="event-card__cta">View Case Study →</p>
+        </div>
+      </a>
+
+      <a href="{{ '/events/ogn-esports' | relative_url }}" class="event-card reveal" data-category="esports" style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <div class="event-card__image placeholder"><span>🎮</span></div>
+        <div class="event-card__body">
+          <div class="event-card__top">
+            <span class="category-tag category-tag--esports">Esports</span>
+            <span class="event-card__year">2016–2021</span>
+          </div>
+          <h2 class="event-card__title">OGN Esports — Content & Community</h2>
+          <p class="event-card__desc">Built OGN's social media presence from scratch, achieving 600% community growth in 9 months while producing content for PUBG League and Clash Royale League.</p>
+          <p class="event-card__metric">✦ 600% social growth · 35M+ livestream views · 4M+ VOD views</p>
+          <p class="event-card__cta">View Case Study →</p>
+        </div>
+      </a>
+
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <p class="eyebrow reveal">Have a project in mind?</p>
+    <h2 class="cta-section__title reveal">Let's create something<br><span class="text-gradient">worth talking about.</span></h2>
+    <div class="hero__ctas reveal">
+      <a href="{{ '/contact' | relative_url }}" class="btn btn--gradient">Get In Touch</a>
+    </div>
+  </div>
+</section>
