@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Home
-description: Matt Coleto — Events Marketing Leader driving cultural impact at the intersection of Anime, K-pop, and Esports.
+description: Bay Area event and brand marketer with 10+ years in anime, K-pop and esports. Crunchyroll Anime Awards, KCON, Clash Royale League. See my work and resume.
 ---
 
 <!-- ═══ HERO ═══════════════════════════════════════════════ -->
@@ -17,8 +16,9 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
     </h1>
 
     <p class="hero__tagline animate-in animate-in--delay-2">
-      Crafting cultural impact at scale — from sold-out festival floors
-      to campaigns reaching hundreds of millions.
+      Fan-first event and brand marketer for anime, K-pop and esports.
+      10+ years marketing the events fans travel for, from KCON to the
+      Crunchyroll Anime Awards. Two-time Telly Award winner, based in the Bay Area.
     </p>
 
     <div class="hero__ctas animate-in animate-in--delay-3">
@@ -142,19 +142,23 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
   </div>
 </section>
 
+<!-- ═══ BRANDS ══════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="brands-heading" style="padding-top:2rem;padding-bottom:2rem;">
+  <div class="container text-center">
+    <p class="eyebrow reveal" id="brands-heading">Brands I've Worked For &amp; With</p>
+    <p class="reveal" style="font-family:var(--font-mono, monospace);font-size:0.95rem;letter-spacing:0.08em;color:var(--text-secondary);line-height:2;">
+      Crunchyroll &nbsp;·&nbsp; Sony &nbsp;·&nbsp; CJ ENM &nbsp;·&nbsp; KCON &nbsp;·&nbsp; Mnet &nbsp;·&nbsp; OGN &nbsp;·&nbsp; Supercell &nbsp;·&nbsp; Tencent &nbsp;·&nbsp; PUBG Corporation &nbsp;·&nbsp; Com2uS &nbsp;·&nbsp; Japan Expo
+    </p>
+  </div>
+</section>
+
 <!-- ═══ ABOUT TEASER ════════════════════════════════════════ -->
 <section class="section section--elevated" aria-labelledby="about-heading">
   <div class="container">
     <div class="about-split">
 
       <div class="about-split__visual reveal">
-        <div class="about-split__image-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
-          <span>Add your photo here</span>
-          <span style="font-size:0.75rem;opacity:0.5;">assets/images/matt-coleto.jpg</span>
-        </div>
+        {% include portrait.html %}
       </div>
 
       <div class="about-split__text reveal">
@@ -273,12 +277,15 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
       <span class="text-gradient">unforgettable?</span>
     </h2>
     <p class="cta-section__sub reveal">
-      Whether you're launching an event, scaling a fandom, or need a marketing
-      leader who lives and breathes fan culture — let's talk.
+      Hiring a marketing or events leader who lives and breathes fan culture?
+      Let's talk.
     </p>
     <div class="hero__ctas reveal">
       <a href="{{ '/contact' | relative_url }}" class="btn btn--gradient">Get In Touch</a>
       <a href="{{ '/assets/files/Matt_Coleto_Resume_2026.pdf' | relative_url }}" class="btn btn--outline" download>Download Resume ↓</a>
     </div>
+    {% if site.kuulective_url != "" %}
+    <p class="cta-section__sub reveal" style="margin-top:2rem;">Need event coverage or a fan campaign? <a href="{{ site.kuulective_url }}">Work with Kuulective →</a></p>
+    {% endif %}
   </div>
 </section>

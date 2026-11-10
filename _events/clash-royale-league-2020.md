@@ -1,6 +1,6 @@
 ---
 title: "Clash Royale League — 2020 Virtual Season"
-subtitle: "Pivoting a premier mobile esports league to a fully virtual format and growing it to 1M+ subscribers."
+subtitle: "From the OGN Super Arena to a fully virtual season, growing a premier mobile esports league to 1M+ subscribers."
 category: Esports
 year: 2020
 emoji: "⚔️"
@@ -53,6 +53,10 @@ Virtual esports in 2020 was uncharted territory. The energy of a live event floo
 - Delivered **25M+ views** across live broadcasts and supporting content
 - Successfully executed the **first fully virtual CRL season** with no live event budget
 - Established a scalable content framework that continued into future seasons
+
+## Before 2020: CRL at the OGN Super Arena
+
+Clash Royale League is Clash Royale's official esports competition, running each year from summer through the World Finals in December with more than $1M in prize money. Before the virtual pivot, CRL was played in person at the OGN Super Arena in Los Angeles, with franchise teams including Team Liquid, SK Gaming, Dignitas, paiN Gaming, Tribe Gaming, Spacestation Gaming, Misfits Gaming, Chivas Esports, Cream Real Betis and Team Queso.
 
 ## What I Learned
 

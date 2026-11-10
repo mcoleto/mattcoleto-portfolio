@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-description: About Matt Coleto — Events Marketing Leader with 10+ years driving cultural impact in Anime, K-pop, and Esports.
+description: Career timeline, awards and resume for Matt Coleto, events and brand marketer for Crunchyroll, KCON and esports leagues.
 ---
 
 <section class="page-hero">
@@ -17,11 +17,7 @@ description: About Matt Coleto — Events Marketing Leader with 10+ years drivin
     <div class="about-split" style="margin-bottom: 5rem;">
 
       <div class="about-split__visual reveal">
-        <div class="about-split__image-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <span>Add your photo here</span>
-          <span style="font-size:0.75rem;opacity:0.5;">assets/images/matt-coleto.jpg</span>
-        </div>
+        {% include portrait.html %}
       </div>
 
       <div class="about-split__text reveal">
@@ -30,6 +26,9 @@ description: About Matt Coleto — Events Marketing Leader with 10+ years drivin
         <p>My career has taken me from coordinating 7 international KCON festivals for CJ ENM, to leading the Clash Royale League's pivot to a fully virtual esports season, to directing the marketing strategy for Crunchyroll's Anime Awards — growing the global vote from 18 million to 51 million across 200+ countries and earning two Telly Awards in the process.</p>
 
         <p>What sets me apart is a fan-first philosophy that shapes everything I touch. I don't just market to audiences — I am the audience. That genuine cultural fluency, combined with a rigorous approach to analytics and a forward-looking interest in generative AI, XR, and emerging technology, lets me build campaigns that feel authentic and perform at scale.</p>
+
+        <!-- CONFIRM (Matt): name the cons you shoot (e.g. Anime Expo, SDCC, Anime NYC, NYCC) if you're happy to list them. -->
+        <p>Beyond marketing, I'm a photographer, videographer and event host, and I shoot convention and event coverage.{% if site.kuulective_url != "" %} For coverage, campaigns and creator work, see my agency, <a href="{{ site.kuulective_url }}">Kuulective</a>.{% endif %}</p>
 
         <div class="about-tags" style="margin: 1.5rem 0;">
           <span class="about-tag">Anime</span>
@@ -79,6 +78,38 @@ description: About Matt Coleto — Events Marketing Leader with 10+ years drivin
           <div class="timeline-item__desc">Managed marketing for OGN's esports content (4M+ VOD views, 35M+ livestream views) and KCON's international festival series. Grew social communities 600% in 9 months, led digital strategy for 7 global festivals, and generated 1B+ earned media impressions through MTV, Variety, and MNET Korea partnerships.</div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- Earlier Work & Clients -->
+    <div class="reveal" style="margin-bottom: 5rem;">
+      <p class="eyebrow">Earlier Work</p>
+      <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:1.5rem;">Selected Projects &amp; Clients</h2>
+      <div class="skills-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="skill-card">
+          <div class="skill-card__title">Projects</div>
+          <div class="skill-pills">
+            <span class="skill-pill">KCON LA, NY &amp; Mexico 2017</span>
+            <span class="skill-pill">K-Factor 2017</span>
+            <span class="skill-pill">Summoners War WAC 2017</span>
+            <span class="skill-pill">OGN Supermatch Alpha 2018</span>
+            <span class="skill-pill">National PUBG League</span>
+            <span class="skill-pill">Clash Royale League</span>
+            <span class="skill-pill">Japan Expo USA 2013</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__title">Clients</div>
+          <div class="skill-pills">
+            <span class="skill-pill">CJ Entertainment</span>
+            <span class="skill-pill">Com2uS</span>
+            <span class="skill-pill">Japan Expo</span>
+            <span class="skill-pill">Mnet</span>
+            <span class="skill-pill">PUBG Corporation</span>
+            <span class="skill-pill">Supercell</span>
+            <span class="skill-pill">Tencent</span>
+          </div>
+        </div>
       </div>
     </div>
 

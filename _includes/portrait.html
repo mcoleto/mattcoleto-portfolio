@@ -1,0 +1,8 @@
+{%- assign photo_file = site.static_files | where: "path", site.author.photo | first -%}
+{%- if photo_file -%}
+<img class="about-split__photo" src="{{ site.author.photo | relative_url }}" alt="Portrait of Matt Coleto" width="600" height="750" loading="lazy" style="width:100%;height:auto;border-radius:var(--radius);display:block;">
+{%- else -%}
+<div class="about-split__image-placeholder" aria-hidden="true">
+  <span style="font-family:var(--font-heading, 'Syne', sans-serif);font-size:3.5rem;font-weight:800;letter-spacing:0.05em;">MC</span>
+</div>
+{%- endif -%}

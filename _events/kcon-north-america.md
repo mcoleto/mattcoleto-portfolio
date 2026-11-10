@@ -55,6 +55,18 @@ KCON sat at a fascinating intersection: it was beloved by hardcore K-pop fans gl
 - Delivered post-event reports for **20+ brand partners** across every festival
 - Coordinated **30+ agencies and partners** across North America and Asia consistently
 
+## KCON by the Numbers (2019)
+
+- **150K+ attendees** per event
+- **1.5B+ digital impressions** a year
+- **1.6M+ social followers**
+- **200+ idols** performed, with **250+ influencers** and **200+ programs**
+
+## Brand Partners I Worked With
+
+- **KCON New York:** Toyota, Madison Square Garden, Bibigo, McDonald's, KakaoTalk, Spotify and Time
+- **KCON Los Angeles:** Spotify, Billboard, Toyota, AT&T, McDonald's, Chips Ahoy and KakaoTalk
+
 ## What I Learned
 
 KCON showed me the power of cultural bridges — events that give mainstream audiences permission to experience something they were curious about but hadn't been directly invited into. The most effective campaigns we ran weren't about convincing people to care about K-pop; they were about creating a door wide enough for anyone to walk through.
