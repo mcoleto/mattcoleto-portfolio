@@ -71,9 +71,9 @@ description: Bay Area event and brand marketer with 10+ years in anime, K-pop an
       {% if featured_events.size > 0 %}
         {% for event in featured_events %}
         <a href="{{ event.url | relative_url }}" class="event-card reveal" data-category="{{ event.category | downcase }}">
-          <div class="event-card__image {% unless event.image %}placeholder{% endunless %}">
-            {% if event.image %}
-              <img src="{{ event.image | relative_url }}" alt="{{ event.title }}" loading="lazy">
+          <div class="event-card__image {% unless event.cover %}placeholder{% endunless %}">
+            {% if event.cover %}
+              <img src="{{ event.cover | relative_url }}" alt="{{ event.title }}" loading="lazy">
             {% else %}
               <span>{{ event.emoji | default: '🎌' }}</span>
             {% endif %}
@@ -84,7 +84,7 @@ description: Bay Area event and brand marketer with 10+ years in anime, K-pop an
               <span class="event-card__year">{{ event.year }}</span>
             </div>
             <h3 class="event-card__title">{{ event.title }}</h3>
-            <p class="event-card__desc">{{ event.excerpt | default: event.description | truncate: 110 }}</p>
+            <p class="event-card__desc">{{ event.description | strip_html | truncate: 110 }}</p>
             <p class="event-card__metric">{{ event.metric }}</p>
             <p class="event-card__cta">View Case Study →</p>
           </div>
