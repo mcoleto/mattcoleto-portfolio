@@ -10,6 +10,7 @@ description: "Architected and executed the complete marketing strategy for Super
 role: Director of Marketing, Esports
 company: Airwaves Media Group (Contract)
 period: 2020–2022
+squarespace_slug: clashroyaleleague
 
 stats:
   - value: "1M+"
@@ -57,3 +58,15 @@ Virtual esports in 2020 was uncharted territory. The energy of a live event floo
 ## What I Learned
 
 The CRL 2020 season proved that with the right content architecture, virtual esports could build audience loyalty just as effectively as live events — and often reach broader, more global audiences as a result. Community storytelling, not just match coverage, was the key driver of sustainable channel growth.
+
+## About the League (2018–2020)
+
+The Clash Royale League, or CRL, is Clash Royale's official esports competition. It is held annually in the second half of the year and ends with the World Finals event in early December. In the CRL, players compete in Clash Royale battles in order to be crowned the World Champion and win over $1M in cash prizes.
+
+**Notable franchises:** Dignitas, Chivas Esports, Cream Real Betis, Team Liquid, SK Gaming, paiN Gaming, Spacestation Gaming, Misfits Gaming, Team Queso, Tribe Gaming
+
+## A Look Back
+
+Produced by **Matt Coleto** for Clash Royale Esports.
+
+Take a look back at some of CRL's best moments from the past 3 years! From in-person tournaments at the OGN Super Arena in Los Angeles, to online virtual tournaments in the midst of a pandemic, watch all the best moments, emotions, and plays in one video! 🏆

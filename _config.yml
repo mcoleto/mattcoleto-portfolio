@@ -6,8 +6,12 @@ baseurl: ""
 author:
   name: Matt Coleto
   email: matt.coleto@gmail.com
-  linkedin: https://linkedin.com/in/mattcoleto
-  twitter: https://twitter.com/mattcoleto
+  # Social links, as they appeared on the Squarespace site. Used by the footer and contact page.
+  linkedin: https://www.linkedin.com/in/matthewcoleto/
+  twitter: https://twitter.com/kuurrochurro
+  twitter_handle: kuurrochurro
+  instagram: https://www.instagram.com/kuu.rro/
+  instagram_handle: kuu.rro
 
 # Collections
 collections:
@@ -41,10 +45,15 @@ exclude:
   - vendor
   - README.md
   - .gitignore
+  - scripts
+
+# Jekyll skips files that start with "_"; Cloudflare Pages needs this one
+include:
+  - _redirects
 
 # SEO / Social
 twitter:
-  username: mattcoleto
+  username: kuurrochurro
   card: summary_large_image
 
 logo: /assets/images/og-image.jpg

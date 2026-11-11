@@ -1,0 +1,20 @@
+{% comment %}
+  Photo gallery for an event page. Images live in assets/images/work/<slug>/
+  and are listed in _data/galleries/<slug>.yml (written by
+  scripts/import_squarespace_images.py). Pages with no gallery data render nothing.
+{% endcomment %}
+{% assign gallery = site.data.galleries[page.slug] %}
+{% if gallery and gallery.size > 0 %}
+<section class="event-gallery" aria-label="Photos from {{ page.title }}">
+  <div class="container">
+    <p class="eyebrow">Gallery</p>
+    <div class="event-gallery__grid">
+      {% for photo in gallery %}
+      <a href="{{ photo.src | relative_url }}" class="event-gallery__item" target="_blank" rel="noopener">
+        <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | default: page.title }}" loading="lazy">
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

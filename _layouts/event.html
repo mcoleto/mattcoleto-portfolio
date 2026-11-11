@@ -4,7 +4,7 @@ layout: default
 <article class="event-detail" itemscope itemtype="https://schema.org/Event">
 
   <!-- Event Hero -->
-  <section class="event-hero" {% if page.hero_image %}style="--hero-img: url('{{ page.hero_image | relative_url }}')"{% endif %}>
+  <section class="event-hero" {% assign hero = page.hero_image | default: page.image %}{% unless hero %}{% assign hero = site.data.galleries[page.slug].first.src %}{% endunless %}{% if hero %}style="--hero-img: url('{{ hero | relative_url }}')"{% endif %}>
     <div class="event-hero__overlay"></div>
     <div class="container event-hero__content">
       <div class="event-hero__meta">
@@ -48,7 +48,15 @@ layout: default
 
     {{ content }}
 
+    {% if page.video %}
+    <div class="event-video">
+      <iframe src="https://www.youtube-nocookie.com/embed/{{ page.video }}" title="{{ page.title }} video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+
   </div>
+
+  {% include gallery.html %}
 
   <!-- Next Event CTA -->
   <section class="event-cta">

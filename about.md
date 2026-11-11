@@ -82,6 +82,30 @@ description: About Matt Coleto — Events Marketing Leader with 10+ years drivin
       </div>
     </div>
 
+    <!-- Earlier Projects & Clients (carried over from the Squarespace About page) -->
+    <div class="reveal" style="margin-bottom: 5rem;">
+      <p class="eyebrow">Project Archive</p>
+      <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:2rem;">Projects &amp; Clients</h2>
+      <div class="skills-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="skill-card">
+          <div class="skill-card__icon">🗂️</div>
+          <div class="skill-card__title">Projects</div>
+          <div class="skill-pills">
+            {% for project in site.data.archive.projects %}<span class="skill-pill">{{ project }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">🤝</div>
+          <div class="skill-card__title">Clients</div>
+          <div class="skill-pills">
+            {% for client in site.data.archive.clients %}<span class="skill-pill">{{ client }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Awards & Recognition -->
     <div class="reveal" style="margin-bottom: 3rem;">
       <p class="eyebrow">Recognition</p>
