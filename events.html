@@ -33,9 +33,10 @@ description: Events, campaigns, and brand activations by Matt Coleto — spannin
          class="event-card reveal"
          data-category="{{ event.category | downcase | replace: ' ', '-' }}"
          style="transition: opacity 0.3s ease, transform 0.3s ease;">
-        <div class="event-card__image {% unless event.image %}placeholder{% endunless %}">
-          {% if event.image %}
-            <img src="{{ event.image | relative_url }}" alt="{{ event.title }}" loading="lazy">
+        {% assign card_img = event.image | default: site.data.galleries[event.slug].first.src %}
+        <div class="event-card__image {% unless card_img %}placeholder{% endunless %}">
+          {% if card_img %}
+            <img src="{{ card_img | relative_url }}" alt="{{ event.title }}" loading="lazy">
           {% else %}
             <span>{{ event.emoji | default: '🎌' }}</span>
           {% endif %}

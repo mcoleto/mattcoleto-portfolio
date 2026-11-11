@@ -57,6 +57,32 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
   </div>
 </section>
 
+<!-- ═══ PHILOSOPHY ═════════════════════════════════════════ -->
+<section class="section section--elevated" aria-labelledby="philosophy-heading">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="eyebrow">I'm in the business of fostering &amp; celebrating fandoms</p>
+      <h2 class="section__title" id="philosophy-heading">To market authentically to fans,<br><span class="text-gradient">you must become a fan.</span></h2>
+      <p class="section__subtitle">Concepting, producing, and marketing authentic, epic, once-in-a-lifetime experiences, and crafting stories to be echoed to our future generations. One belief guides my work across niche fandoms into the mainstream:</p>
+    </div>
+
+    <div class="skills-grid philosophy-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card__icon">🌊</div>
+        <div class="skill-card__title">Dive into the culture</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card__icon">🔥</div>
+        <div class="skill-card__title">Build your own passion for the content</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card__icon">💡</div>
+        <div class="skill-card__title">Discover what truly resonates with fans</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ FEATURED WORK ═══════════════════════════════════════ -->
 <section class="section" aria-labelledby="work-heading">
   <div class="container">
@@ -71,9 +97,10 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
       {% if featured_events.size > 0 %}
         {% for event in featured_events %}
         <a href="{{ event.url | relative_url }}" class="event-card reveal" data-category="{{ event.category | downcase }}">
-          <div class="event-card__image {% unless event.image %}placeholder{% endunless %}">
-            {% if event.image %}
-              <img src="{{ event.image | relative_url }}" alt="{{ event.title }}" loading="lazy">
+          {% assign card_img = event.image | default: site.data.galleries[event.slug].first.src %}
+          <div class="event-card__image {% unless card_img %}placeholder{% endunless %}">
+            {% if card_img %}
+              <img src="{{ card_img | relative_url }}" alt="{{ event.title }}" loading="lazy">
             {% else %}
               <span>{{ event.emoji | default: '🎌' }}</span>
             {% endif %}
@@ -84,7 +111,7 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
               <span class="event-card__year">{{ event.year }}</span>
             </div>
             <h3 class="event-card__title">{{ event.title }}</h3>
-            <p class="event-card__desc">{{ event.excerpt | default: event.description | truncate: 110 }}</p>
+            <p class="event-card__desc">{{ event.description | truncate: 110 }}</p>
             <p class="event-card__metric">{{ event.metric }}</p>
             <p class="event-card__cta">View Case Study →</p>
           </div>
@@ -142,8 +169,23 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
   </div>
 </section>
 
+<!-- ═══ BRANDS ═════════════════════════════════════════════ -->
+<section class="section section--elevated" aria-labelledby="brands-heading">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="eyebrow">Partners</p>
+      <h2 class="section__title" id="brands-heading">Brands I've Worked For &amp; Partnered With</h2>
+    </div>
+    <ul class="brand-wall reveal" role="list">
+      {% for brand in site.data.brands %}
+      <li class="brand-wall__item">{{ brand }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 <!-- ═══ ABOUT TEASER ════════════════════════════════════════ -->
-<section class="section section--elevated" aria-labelledby="about-heading">
+<section class="section" aria-labelledby="about-heading">
   <div class="container">
     <div class="about-split">
 
@@ -183,7 +225,7 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
 </section>
 
 <!-- ═══ SKILLS SNAPSHOT ══════════════════════════════════════ -->
-<section class="section" aria-labelledby="skills-heading">
+<section class="section section--elevated" aria-labelledby="skills-heading">
   <div class="container">
     <div class="section__header reveal">
       <p class="eyebrow">Expertise</p>
@@ -260,6 +302,24 @@ description: Matt Coleto — Events Marketing Leader driving cultural impact at 
           <span class="skill-pill">Stakeholder Reporting</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ALSO AVAILABLE ═══════════════════════════════════════ -->
+<section class="section" aria-labelledby="also-heading">
+  <div class="container container--narrow text-center">
+    <p class="eyebrow reveal">P.S.</p>
+    <h2 class="section__title reveal" id="also-heading">Photographer, videographer &amp; host</h2>
+    <p class="section__subtitle reveal" style="margin-left:auto;margin-right:auto;">
+      I'm also a photographer, videographer, and content creator in my spare time, and I've hosted events before.
+      Feel free to reach out for any event coverage or hosting needs!
+    </p>
+    <div class="skill-pills reveal" style="justify-content:center;margin-top:1.5rem;">
+      <span class="skill-pill">Photography</span>
+      <span class="skill-pill">Videography</span>
+      <span class="skill-pill">Content Creation</span>
+      <span class="skill-pill">Event Hosting</span>
     </div>
   </div>
 </section>

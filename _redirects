@@ -1,0 +1,17 @@
+# Cloudflare Pages redirects: keep old Squarespace URLs working after the domain moves.
+# https://developers.cloudflare.com/pages/configuration/redirects/
+/work                                               /events/                                             301
+/work/                                              /events/                                             301
+/work/crunchyroll-expo-2022                         /events/crunchyroll-expo-2022/                       301
+/work/kcontact                                      /events/kcontact/                                    301
+/work/clashroyaleleague                             /events/clash-royale-league-2020/                    301
+/work/kcon-new-york                                 /events/kcon-new-york/                               301
+/work/kcon-los-angeles                              /events/kcon-los-angeles/                            301
+/work/national-pubg-league                          /events/national-pubg-league/                        301
+/work/ogn-supermatch-alpha-2018                     /events/ogn-supermatch-alpha-2018/                   301
+/work/summoners-war-world-arena-championship-2017   /events/summoners-war-world-arena-championship-2017/ 301
+# Not carried over (duplicate copy / unfinished page)
+/work/kcon-2022-los-angeles                         /events/                                             301
+/work/vtubers-metaverse                             /events/                                             301
+/work/*                                             /events/                                             301
+/cart                                               /                                                    301
