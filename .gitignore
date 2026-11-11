@@ -8,3 +8,4 @@ Gemfile.lock
 node_modules/
 .env
 *.DS_Store
+__pycache__/
